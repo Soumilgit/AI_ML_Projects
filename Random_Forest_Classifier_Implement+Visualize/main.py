@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 
-file_path1 = 'Health_subject1.csv'
-file_path2 = 'Health_subject2.csv'
+file_path1 = 'new_Health_subject1.csv'
+file_path2 = 'new_Health_subject2.csv'
 
 df1 = pd.read_csv(file_path1)
 df2 = pd.read_csv(file_path2)
