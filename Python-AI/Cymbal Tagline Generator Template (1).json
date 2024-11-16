@@ -1,63 +1,79 @@
 {
-  "title": "Cymbal Tagline Generator Template",
-  "description": "",
+  "title": "Cymbal Outdoor Tagline Generator Template",
+  "description": "Generate impactful taglines for outdoor gear product lines aimed at young adventurers.",
   "parameters": {
     "groundingPromptConfig": {
-      "disabled": true,
+      "disabled": false,
       "groundingConfig": {
         "sources": [
           {
-            "type": "WEB"
+            "type": "WEB",
+            "priority": "high"
+          },
+          {
+            "type": "DATABASE",
+            "priority": "low"
           }
         ]
       }
     },
-    "stopSequences": [],
-    "temperature": 1,
-    "tokenLimits": 2048,
-    "topP": 1
+    "stopSequences": ["--END--"],
+    "temperature": 0.9,
+    "tokenLimits": 2500,
+    "topP": 0.95,
+    "frequencyPenalty": 0.2,
+    "presencePenalty": 0.3
   },
   "systemInstruction": {
     "parts": [
       {
-        "text": "Cymbal Direct is partnering with an outdoor gear retailer. They're launching a new line of products designed to encourage young people to explore the outdoors. Help them create catchy taglines for this product line.\n"
+        "text": "Cymbal Direct is collaborating with an outdoor retailer to inspire youth to reconnect with nature. Help craft engaging taglines for this exciting product line."
       }
     ]
   },
   "inputPrefixes": [
-    ""
+    "Prompt:"
   ],
   "outputPrefixes": [
-    ""
+    "Tagline:"
   ],
-"examples": [
-  {
-    "inputs": [
-      "Write a tagline for a durable backpack designed for hikers that makes them feel prepared. Consider styles like minimalist."
-    ],
-    "outputs": [
-      "Built for the Journey: Your Adventure Essentials."
-    ]
-  },
-  {
-    "inputs": [
-      "Write a tagline for an eco-friendly rain jacket designed for families that makes them feel connected. Consider styles like playful, with a touch of humor."
-    ],
-    "outputs": [
-      "Explore More, Worry Less. Weather the fun together!"
-    ]
-  }
-],
-  "testData": [
+  "examples": [
     {
       "inputs": [
-        "Write a tagline for a lightweight tent designed for seasoned explorers that makes them feel free. Consider styles like poetic."
+        "Prompt: Create a tagline for a rugged water bottle for active teens, emphasizing resilience. Use a bold and energetic style."
+      ],
+      "outputs": [
+        "Tagline: Unstoppable Hydration for Your Unstoppable Adventures!"
+      ]
+    },
+    {
+      "inputs": [
+        "Prompt: Suggest a tagline for a solar-powered camping lantern for families, highlighting eco-friendliness. Style should be warm and inviting."
+      ],
+      "outputs": [
+        "Tagline: Brighten Your Nights, Naturally."
       ]
     }
   ],
-  "type": "freeform",
+  "testData": [
+    {
+      "inputs": [
+        "Prompt: Write a tagline for a compact sleeping bag designed for solo travelers that evokes a sense of freedom. Style should be inspiring."
+      ]
+    },
+    {
+      "inputs": [
+        "Prompt: Generate a tagline for a high-tech smartwatch for young explorers, focusing on versatility. Style should be futuristic and innovative."
+      ]
+    }
+  ],
+  "type": "creative-task",
   "prompt": {
-    "parts": []
+    "parts": [
+      {
+        "text": "Think of taglines as mini-mission statements that encapsulate the essence of the product. Be imaginative and targeted in your responses."
+      }
+    ]
   },
-  "model": "google/gemini-1.5-pro-001"
+  "model": "openai/gpt-4"
 }
