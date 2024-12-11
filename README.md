@@ -7,7 +7,7 @@ The better ones:
 [Random-Forest-Classifier](https://github.com/Soumilgit/AI_ML_Projects/tree/main/Random_Forest_Classifier_Implement%2BVisualize)
 
 # Folder structure :
-Here's the folder structure of the repository :
+Here is the folder structure of the repository :
 ```
 .github
 FUNDING.yml
